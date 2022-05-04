@@ -39,7 +39,12 @@
         <a href="./products.php"><span class="material-symbols-outlined">sailing</span>  Fishing Gear</a>
         <a class="active" href="./aboutUs.php"><span class="material-symbols-outlined">group</span>  About Us</a>
         <a href="./help.php"><span class="material-symbols-outlined">help</span>  How-to-Use</a>
-        <a href="./loginForm.php"><span class="material-symbols-outlined">login</span>  Login</a>
+        <?php
+        if(!isset($_SESSION['name']))
+          echo "<a href=\"./loginForm.php\"><span class=\"material-symbols-outlined\">login</span>Login</a>";
+        else
+          echo "<a href=\"./logout.php\"><span class=\"material-symbols-outlined\">login</span>Logout</a>";
+        ?>
     </div>
     
   
